@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.food4friends_mk2.ProfileActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:logo="@mipmap/ic_launcher_round"
+        android:theme="@style/ToolBarStyle"
+        android:title="@string/app_name"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <RelativeLayout
+        android:id="@+id/rlProfileHeader"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/ivProfileMain"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvFullNameMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivProfileMain"
+            android:layout_toEndOf="@+id/ivProfileMain"
+            android:layout_toRightOf="@+id/ivProfileMain"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Full Name"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvUsernameMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvFullNameMain"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/tvFullNameMain"
+            android:layout_toRightOf="@+id/tvFullNameMain"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text=" @username"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvSchoolNameMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFullNameMain"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/ivProfileMain"
+            android:layout_toRightOf="@+id/ivProfileMain"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="School of Engineering"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvMajorMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSchoolNameMain"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/ivProfileMain"
+            android:layout_toRightOf="@+id/ivProfileMain"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Computer Science"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvSchoolYearMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMajorMain"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/ivProfileMain"
+            android:layout_toRightOf="@+id/ivProfileMain"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Class of 2020"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rlProfileHeader"
+        android:background="@android:color/white">
+
+        <!-- add recycler view/tab layout -->
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@android:color/black"
+            app:tabSelectedTextColor="@android:color/black">
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/meetupsTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text="Meetups" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/friendsTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friends" />
+        </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabLayout"
+            android:background="@android:color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

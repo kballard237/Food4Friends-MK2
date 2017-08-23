@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/colorPrimary">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:backgroundTint="@android:color/white"
+        android:id="@+id/cardView"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvMeetupName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:text="Meetup Name"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivDateIcon"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvLocation"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@+id/tvMeetupName"
+                app:srcCompat="@drawable/ic_date_icon" />
+
+            <TextView
+                android:id="@+id/tvMeetupDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meetup Date"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/ivDateIcon"
+                android:layout_marginBottom="5dp"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/tvMeetupName"/>
+
+            <ImageView
+                android:id="@+id/ivLocationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tvLocation"
+                android:layout_toStartOf="@+id/tvLocation"
+                android:layout_alignBottom="@+id/tvLocation"
+                android:layout_alignTop="@+id/tvLocation"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/ic_location_icon" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meetup Location"
+                android:textSize="18sp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/tvMeetupDate"
+                android:layout_alignStart="@+id/tvMeetupDate" />
+
+            <ImageView
+                android:id="@+id/ivParticipantsIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvParticipants"
+                android:layout_alignTop="@+id/tvParticipants"
+                android:layout_toLeftOf="@+id/tvParticipants"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/ic_participants_icon" />
+
+            <TextView
+                android:id="@+id/tvParticipants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You, Melissa, and Vinny are going"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/tvLocation"
+                android:layout_alignStart="@+id/tvLocation"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
